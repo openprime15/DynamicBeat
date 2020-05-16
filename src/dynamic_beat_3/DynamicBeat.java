@@ -8,6 +8,10 @@ import javax.swing.JFrame;
 
 public class DynamicBeat extends JFrame {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -589647124256813842L;
 	private Image screenImage;
 	private Graphics screenGraphic;
 	
