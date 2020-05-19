@@ -34,6 +34,8 @@ public class DynamicBeat extends JFrame {
 	private ImageIcon rightButtonBasicImage = new ImageIcon(Main.class.getResource("../images/rightButtonBasic.png"));
 	private ImageIcon rightButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/rightButtonEntered.png"));	
 	
+	
+	private Image titleImage = new ImageIcon(Main.class.getResource("../images/Humanity Title Image.png")).getImage();
 	private Image selectedImage = new ImageIcon(Main.class.getResource("../images/Mighthy Love Start Image.jpg")).getImage();
 		//배경화면
 	private Image background = new ImageIcon(Main.class.getResource("../images/IntroBackground.jpg")).getImage();
@@ -182,6 +184,7 @@ public class DynamicBeat extends JFrame {
 		add(quitButton);
 		
 		//left버튼 부분
+		leftButton.setVisible(false);
 		leftButton.setBounds(140, 310, 60, 60);
 		leftButton.setBorderPainted(false);
 		leftButton.setContentAreaFilled(false);
@@ -214,7 +217,8 @@ public class DynamicBeat extends JFrame {
 		add(leftButton);
 		
 		//right버튼 부분
-		rightButton.setBounds(140, 310, 60, 60);
+		rightButton.setVisible(false);
+		rightButton.setBounds(1080, 310, 60, 60);
 		rightButton.setBorderPainted(false);
 		rightButton.setContentAreaFilled(false);
 		rightButton.setFocusPainted(false);
@@ -283,6 +287,7 @@ public class DynamicBeat extends JFrame {
 		g.drawImage(background, 0, 0, null);
 		if(isMainScreen){
 			g.drawImage(selectedImage, 340, 100, null);
+			g.drawImage(titleImage, 340, 70, null);
 		}
 		
 		paintComponents(g);
